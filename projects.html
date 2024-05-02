@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Games</title>
+        <title>Progress Updates</title>
         
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
@@ -87,6 +87,13 @@
                 flex-direction: column;
                 margin-top: 10px;
             }
+            
+            .row {
+                display: flex;
+                flex-direction: row;
+                margin-top: 10px;
+                justify-content: center;
+            }
 
             .bodyleft {
                 width: 80%;
@@ -115,35 +122,83 @@
                 line-height: 30px;
             }
 
-            .thotpbutton {
-                background-color: #000000;
-                border: 2.5px solid #ff0000;
+            .unrevealedbutton {
+                background-color: #282828;
+                border: 5px solid #181818;
                 border-radius: 25px;
                 padding: 10px 10px 10px 10px;
                 display: flex;
-                width: 95%;
-                height: 5%;
+                width: 25%;
+                height: 50%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 20px;
+            }
+            .unrevealedtext {
+                color:#616161;
+                font-size: 20px;
+                line-height: 30px;
+                width: 100%;
+            }
+            .unrevealedprogresstext {
+                color:#414141;
+                font-size: 15px;
+                line-height: 0px;
+                width: 100%;
+            }
+            .unrevealedprogressbar {
+                color:#0c0900;
+                width: 90%;
+            }
+            .unrevealedimg {
+                width: 30%;
+                height: 30%;
+                border-radius: 15px;    
+            }
+
+            .thotpbutton {
+                background-color: rgb(255, 223, 95);
+                border: 5px solid #ff0000;
+                border-radius: 25px;
+                padding: 10px 10px 10px 10px;
+                display: flex;
+                width: 25%;
+                height: 50%;
                 align-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: center;
                 cursor: pointer;
+                margin: 20px;
             }
             .thotptext {
                 color:#ff7300;
                 font-size: 20px;
-                margin-top: 25px;
+                margin-top: 20px;
                 margin-bottom: 0px;
                 width: 100%;
             }
             .thotpsubtext {
                 color:#ff7300;
                 font-size: 15px;
+                margin-bottom: 20px;
                 width: 100%;
             }
+            .thotpprogresstext {
+                color:#0c0900;
+                font-size: 15px;
+                line-height: 0px;
+                width: 100%;
+            }
+            .thotpprogressbar {
+                color:#0c0900;
+                width: 90%;
+            }
             .thotpimg {
-                width: 15%;
-                height: 15%;
+                width: 30%;
+                height: 30%;
                 border-radius: 15px;    
             }
         </style>
@@ -154,8 +209,8 @@
                 <h1 class="head">Sathvik Vemulapalli</h1>
                 <div class="headerleft">
                     <a class="headera" href="index.html">HOME</a>
-                    <a class="headeraselected">GAMES</a>
-                    <a class="headera" href="projects.html">PROGRESS TRACKERS</a>
+                    <a class="headera" href="games.html">GAMES</a>
+                    <a class="headeraselected">PROGRESS TRACKERS</a>
                 </div>
 
                 <div class="socialheader">
@@ -248,13 +303,41 @@
                 });
             </script>
             
-            <center>
-                <button class="thotpbutton" onclick="window.location.replace('https://thetravelingcircus.wixsite.com/thetravelingcircus/the-heart-of-the-phoenix')">
+            <center><h2>In-Progress Projects</h1></center>
+            <div class="row">
+                <button class="thotpbutton" onclick="window.location.href='./projects/thotp.html'">
                     <img src="thotpbigoutline.png" alt="thotplogo" class="thotpimg"/>
                     <p class="thotptext"><b>The Heart of The Phoenix</b></p>
                     <p class="thotpsubtext"><b>The Lost Isles</b></p>
+                    <p class="thotpprogresstext"><b>35%</b></p>
+                    <progress class="thotpprogressbar" value="35" max="100"></progress>
                 </button>
-            </center>
+            </div>
         </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <center><h2>Unrevealed Projects</h1></center>
+        <div class="row">
+            <button class="unrevealedbutton">
+                <img src="unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
+                <p class="unrevealedtext" id="tarot"><b>Nl_T</b></p>
+                <p class="unrevealedprogresstext"><b>T.E.F.</b></p>
+                <progress class="unrevealedprogressbar" value="0" max="100"></progress>
+            </button>
+            <button class="unrevealedbutton">
+                <img src="unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
+                <p class="unrevealedtext" id="mystery"><b>Pt_M</b></p>
+                <p class="unrevealedprogresstext"><b>D.L.</b></p>
+                <progress class="unrevealedprogressbar" value="0" max="100"></progress>
+            </button>
+            <button class="unrevealedbutton">
+                <img src="unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
+                <p class="unrevealedtext" id="nightingale"><b>Nl_N</b></p>
+                <p class="unrevealedprogresstext"><b>N.B.</b></p>
+                <progress class="unrevealedprogressbar" value="0" max="100"></progress>
+            </button>
+        </div>
+    </div>
     </body>
 </html>
