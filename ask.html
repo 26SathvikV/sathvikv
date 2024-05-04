@@ -131,23 +131,12 @@
 
     <div id="inputContainer" contenteditable="true" autofocus="true"></div>
 
-    <script>
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-        
-        const firebaseConfig = {
-          apiKey: "AIzaSyA8xVUR1agSDRvbVXQn9jRxjyYPprJTrH0",
-          authDomain: "askqna-7c118.firebaseapp.com",
-          projectId: "askqna-7c118",
-          storageBucket: "askqna-7c118.appspot.com",
-          messagingSenderId: "112548806557",
-          appId: "1:112548806557:web:bdd026d6e79b4709f63974",
-          measurementId: "G-HDGJL9DB4L"
-        };
-      
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js" defer></script>
 
+    <script src="databaseFuncs.js" defer></script>
+
+    <script>
         const inputContainer = document.getElementById("inputContainer");
 
         function countWords(inputString) {
@@ -159,7 +148,7 @@
             return words.length;
         }
 
-        function performSearch() {
+        async function performSearch() {
             const searchTerm = inputContainer.innerText.trim().toLowerCase();
             let searchResult;
             
@@ -167,11 +156,18 @@
                 searchResult = "The system can't interpret multiple words. Try entering just one word!";
             }
             else {
+                let dbSearch = await getValueFromDocumentVariable("sathvik/qna",searchTerm);
+
                 if (searchTerm === "") {
                     searchResult = "Nothing came through.";
                 }
                 else {
-                    searchResult = "Sorry? Could you repeat that?";
+                    if (dbSearch === "-1") {
+                        searchResult = "Sorry? Could you repeat that?";
+                    }
+                    else {
+                        searchResult = dbSearch;
+                    }
                 }
             }
 
@@ -185,7 +181,13 @@
             }
         });
 
-        inputContainer.focus();
+        window.onclick = function (event) {
+            var myBox = document.getElementById('inputContainer');
+
+            if (event.target.contains(myBox) && event.target !== myBox) {
+                inputContainer.focus();
+            }
+        }
     </script>
 </body>
 </html>

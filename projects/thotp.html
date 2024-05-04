@@ -18,6 +18,32 @@
                 color: #ff935d;
             }
 
+            progress[value] {
+                --color: rgb(0, 110, 255); /* the progress color */
+                --background: #ffffff; /* the background color */
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                width: 90%;
+                height: 10px;
+                border-radius: 10em;
+                background: var(--background);
+            }
+                progress[value]::-webkit-progress-bar {
+                border-radius: 10em;
+                background: var(--background);
+            }
+            progress[value]::-webkit-progress-value {
+                border-radius: 10em;
+                background: var(--color);
+            }
+            progress[value]::-moz-progress-bar {
+                border-radius: 10em;
+                background: var(--color);
+            }
+
             .head {
                 color: #ff865d;
                 text-align: center;
@@ -147,9 +173,15 @@
                 height: 15%;
                 border-radius: 15px;    
             }
-            .thotpprogressbar {
-                color:#0c0900;
-                width: 90%;
+            .thotpprogressbar[value] {
+                --color: red;
+                --background: #fff4a9;
+                align-self: center;
+            }
+            .indprogressbar[value] {
+                --color: rgb(255, 82, 82);
+                --background: #ffe3b2;
+                align-self: center;
             }
         </style>
     </head>
@@ -255,13 +287,56 @@
         
             <center>
                 <h2>Overall Progress</h2>
-                <p>35%</p>
-                <progress class="thotpprogressbar" value="35" max="100"></progress>
+                <p>11%</p>
+            </center>
+            <progress class="thotpprogressbar" value="17.45" max="165"></progress>
+
+            <br><br>
+
+            <center>
+                <br><br><br>
+                <h2>Individual Progress</h2>
             </center>
 
-            <div class="row">
+            <center>
+                <br>
 
-            </div>
+                <h3>UI Progress</h3>
+                <p>47%</p>
+            </center>
+            <progress class="indprogressbar" value="10.25" max="22"></progress>
+
+            <center>
+                <br><br>
+
+                <h3>Mechanics Progress</h3>
+                <p>10%</p>
+            </center>
+            <progress class="indprogressbar" value="1" max="10"></progress>
+
+            <center>
+                <br><br>
+
+                <h3>Music Progress</h3>
+                <p>8%</p>
+            </center>
+            <progress class="indprogressbar" value="3" max="24"></progress>
+
+            <center>
+                <br><br>
+
+                <h3>Model Progress</h3>
+                <p>3%</p>
+            </center>
+            <progress class="indprogressbar" value="3" max="100"></progress>
+
+            <center>
+                <br><br>
+
+                <h3>Dungeon Progress</h3>
+                <p>2%</p>
+            </center>
+            <progress class="indprogressbar" value="0.2" max="9"></progress>
         </div>
     </body>
 </html>

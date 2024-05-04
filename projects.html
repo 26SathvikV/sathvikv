@@ -18,6 +18,32 @@
                 color: #5daeff;
             }
 
+            progress[value] {
+                --color: rgb(0, 110, 255); /* the progress color */
+                --background: #ffffff; /* the background color */
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                width: 90%;
+                height: 10px;
+                border-radius: 10em;
+                background: var(--background);
+            }
+                progress[value]::-webkit-progress-bar {
+                border-radius: 10em;
+                background: var(--background);
+            }
+            progress[value]::-webkit-progress-value {
+                border-radius: 10em;
+                background: var(--color);
+            }
+            progress[value]::-moz-progress-bar {
+                border-radius: 10em;
+                background: var(--color);
+            }
+
             .head {
                 color: #5daeff;
                 text-align: center;
@@ -148,9 +174,9 @@
                 line-height: 0px;
                 width: 100%;
             }
-            .unrevealedprogressbar {
-                color:#0c0900;
-                width: 90%;
+            .unrevealedprogressbar[value] {
+                --color: rgb(0, 0, 0);
+                --background: #545454;
             }
             .unrevealedimg {
                 width: 30%;
@@ -192,9 +218,9 @@
                 line-height: 0px;
                 width: 100%;
             }
-            .thotpprogressbar {
-                color:#0c0900;
-                width: 90%;
+            .thotpprogressbar[value] {
+                --color: red;
+                --background: #fff4a9;
             }
             .thotpimg {
                 width: 30%;
@@ -309,8 +335,8 @@
                     <img src="thotpbigoutline.png" alt="thotplogo" class="thotpimg"/>
                     <p class="thotptext"><b>The Heart of The Phoenix</b></p>
                     <p class="thotpsubtext"><b>The Lost Isles</b></p>
-                    <p class="thotpprogresstext"><b>35%</b></p>
-                    <progress class="thotpprogressbar" value="35" max="100"></progress>
+                    <p class="thotpprogresstext"><b>11%</b></p>
+                    <progress class="thotpprogressbar" value="17.45" max="165"></progress>
                 </button>
             </div>
         </div>

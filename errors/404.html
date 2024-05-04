@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Home</title>
+        <title>Error 404: Page Not Found</title>
         
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
@@ -23,6 +23,10 @@
             }
 
             a :visited{
+                color: #5daeff;
+            }
+            
+            html {
                 color: #5daeff;
             }
 
@@ -92,45 +96,32 @@
 
             .body {
                 display: flex;
-                flex-direction: row;
-                column-gap: 1%;
+                flex-direction: column;
                 margin-top: 10px;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
             }
 
             .bodyleft {
                 width: 80%;
             }
             .updates {
-                width: 18%;
-                height: 100%;
-                border: #5daeff 3px solid;
+                width: 19%;
+                border: #5daeff solid;
                 border-radius: 25px;
             }
             .section {
                 padding: 20px;
                 border: #5daeff solid;
-                border-radius: 25px;
                 margin-bottom: 1%;
-            }
-            .sectionccc {
-                padding: 20px;
-                border: #ffbbaa solid;
                 border-radius: 25px;
-                margin-bottom: 1%;
             }
             .updatessection {
-                padding: 10px 20px;
-                margin: 10px;
-                margin-bottom: 30px;
-                background: rgba(86, 63, 255,0.1);
-                border-radius: 25px;
-            }
-            .updatessectionccc {
-                padding: 10px 20px;
-                margin: 10px;
-                margin-bottom: 30px;
-                background: rgba(101, 74, 67,0.2);
-                border-radius: 25px;
+                padding:0px 20px;
             }
             .titletext{
                 color: #5daeff;
@@ -141,25 +132,31 @@
                 font-size: 20px;
                 line-height: 30px;
             }
-            .titletextccc {
-                color: #ffbbaa;
-                text-decoration: underline #ffbbaa;
+
+            .thotpbutton {
+                background-color: #000000;
+                border: 2.5px solid #ff0000;
+                border-radius: 25px;
+                padding: 10px 10px 10px 10px;
+                display: flex;
+                width: 95%;
+                height: 5%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                cursor: pointer;
             }
-            .bodytextccc {
-                color:#ffbbaa;
+            .thotptext {
+                color:#ff7300;
                 font-size: 20px;
                 line-height: 30px;
+                width: 100%;
             }
-            .spotifyimg {
-                width: 30px;
-                padding-bottom: 10px;
-            }
-            .sectionytlink{
-                color:hsl(0, 100%, 50%);
-                font-size:30px;
-            }
-            .sectionytlink :hover{
-                color:hsl(0, 100%, 45%);
+            .thotpimg {
+                width: 15%;
+                height: 15%;
+                border-radius: 15px;    
             }
         </style>
     </head>
@@ -242,56 +239,13 @@
             $("#loader-wrapper").fadeOut(700);
             });
         </script>
-        
-        <center>
-            <div>
-                <h1 class="head">Sathvik Vemulapalli</h1>
-                <div class="headerleft">
-                    <a class="headeraselected">HOME</a>
-                    <a class="headera" href="games.html">GAMES</a>
-                    <a class="headera" href="projects.html">PROGRESS TRACKERS</a>
-                </div>
 
-                <div class="socialheader">
-                    <!--<a href="https://www.youtube.com/@Sathvik5215" class="ytlink"><ion-icon name="logo-youtube"></ion-icon></a>-->
-                    <a href="https://www.instagram.com/sathvik.vemulapalli/" class="instalink"><img src="instalogo.png" class="instaimg"></a>
-                    <a href="https://www.tumblr.com/idostuffsometimeslol" class="tumblink"><ion-icon name="logo-tumblr"></ion-icon></a>
-                </div>
-            </div>
-        </center>
-        <div style="margin-top:30.5px;border-bottom:1px solid #5daeff"></div>
-
-        <center>
+        <!--Body-->
         <div class="body">
-            <div class="bodyleft">
-                <div class="section">
-                    <h1 class="titletext">ABOUT</h1>
-                    <p class="bodytext">Hello! I'm Sathvik Vemulapalli. I like to code, compose music, draw art, and write stories. You can look at my current projects by checking the <a href="projects.html" style="text-decoration: underline; cursor:pointer;">progress trackers page</a>.</p>
-                </div>
-                <div class="section">
-                    <h1 class="titletext">The Traveling Circus is offering internships!</h1>
-                    <p class="bodytext">We are now offering internships! Keep track of our current cycle on our <a href="https://www.linkedin.com/company/101273871/admin/feed/posts/" style="text-decoration: underline; cursor:pointer;">Linkedin Page</a>.</p>
-                </div>
-                <div class="sectionccc">
-                    <h1 class="titletextccc">My sister launched her own non-profit!</h1>
-                    <p class="bodytextccc">My sister Shreya launched her own non-profit cancel.cancer.culture in reponse to the growing stigma around cancer patients and their families! It's a deeply personal project to our family, so I decided I would also join as a social media director! You can also apply or just keep track of our progress at the linktree linked <a href="https://l.instagram.com/?u=http%3A%2F%2Flinktr.ee%2Fcancel.cancer.culture&e=AT2BxAG5SBZ1z4RwdK1gYAS_RAmBJHkTivN2S7dsKbk7w5HEdK0Jr80Hn5baEmaR9MB_Bya77um3NCVSodpybJHivl72FD9fEppDFPM" style="text-decoration: underline; cursor:pointer; color: #ffbbaa">here</a>.</p>
-                </div>
-            </div>
-            <div class="updates">
-                <h1 class="titletext">UPDATES</h1>
-                <div style="overflow-y: scroll; scrollbar-width: 1px;">
-                    <div class="updatessection">
-                        <h2 class="titletext">The Traveling Circus has an official website!</h2>
-                        <p class="bodytext">My game dev company now has an official website. you can find it <a href="https://thetravelingcircus.wixsite.com/thetravelingcircus" style="text-decoration: underline; cursor:pointer;">here</a>.</p>
-                    </div>
-
-                    <div class="updatessectionccc">
-                        <h2 class="titletextccc">My sister launched her own non-profit!</h2>
-                        <p class="bodytextccc">My sister Shreya launched her own non-profit cancel.cancer.culture in reponse to the growing stigma around cancer patients and their families! It's a deeply personal project to our family, so I decided I would also join as a social media director! You can also apply or just keep track of our progress at the linktree linked <a href="https://l.instagram.com/?u=http%3A%2F%2Flinktr.ee%2Fcancel.cancer.culture&e=AT2BxAG5SBZ1z4RwdK1gYAS_RAmBJHkTivN2S7dsKbk7w5HEdK0Jr80Hn5baEmaR9MB_Bya77um3NCVSodpybJHivl72FD9fEppDFPM" style="text-decoration: underline; cursor:pointer; color: #ffbbaa">here</a>.</p>
-                    </div>
-                </div>
-            </div>
+            <center>
+                <h1>It seems that link doesn't exist.</h1>
+                <h2>Would you like to return to the <a href="../index.html" style="text-decoration: underline; cursor:pointer;">home page</a>?</h2>
+            </center>
         </div>
-        </center>
     </body>
 </html>
