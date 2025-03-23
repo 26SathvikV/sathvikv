@@ -228,6 +228,125 @@
                 height: 30%;
                 border-radius: 15px;    
             }
+
+            .lfbutton {
+                background-color: rgb(242, 245, 215);
+                border: 5px solid #babd9d;
+                border-radius: 25px;
+                padding: 10px 10px 10px 10px;
+                display: flex;
+                width: 25%;
+                height: 50%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 20px;
+            }
+            .lftext {
+                color:#d0d3b6;
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 0px;
+                width: 100%;
+            }
+            .lfsubtext {
+                color:#d0d3b6;
+                font-size: 15px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .lfimg {
+                width: 30%;
+                height: 30%;
+                border-radius: 15px;    
+            }
+
+            .tefbutton {
+                background-color: #e79c70;
+                border: 5px solid #5f3f2d;
+                border-radius: 25px;
+                display: flex;
+                width: 25%;
+                height: 50%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                cursor: pointer;
+                margin: 20px;
+            }
+            .teftext {
+                color:#4d2e1c;
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .tefsubtext {
+                color:#914d25;
+                font-size: 10px;
+                width: 100%;
+            }
+            .tefprogresstext {
+                color:#0c0900;
+                font-size: 15px;
+                line-height: 0px;
+                width: 100%;
+            }
+            .tefprogressbar[value] {
+                --color: #b17958;
+                --background: #fff4a9;
+            }
+            .tefimg {
+                width: 50%;
+                height: 50%;
+                border-radius: 15px;    
+            }
+
+            .sofbutton {
+                background-color: rgb(255, 255, 255);
+                border: 5px solid #808080;
+                border-radius: 25px;
+                padding: 10px 10px 10px 10px;
+                display: flex;
+                width: 25%;
+                height: 50%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                cursor: pointer;
+                margin: 20px;
+            }
+            .softext {
+                color:#000000;
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 0px;
+                width: 100%;
+            }
+            .sofsubtext {
+                color:#000000;
+                font-size: 15px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .sofprogresstext {
+                color:#000000;
+                font-size: 15px;
+                line-height: 0px;
+                width: 100%;
+            }
+            .sofprogressbar[value] {
+                --color: rgb(134, 134, 134);
+                --background: #cecece;
+            }
+            .sofimg {
+                width: 30%;
+                height: 30%;
+                border-radius: 15px;    
+            }
         </style>
     </head>
     <body style = "background-color: black; width: 100%; padding: 0%;">
@@ -237,6 +356,8 @@
                 <div class="headerleft">
                     <a class="headera" href="../">HOME</a>
                     <a class="headera" href="../games/">GAMES</a>
+                    <a class="headera" href="/movies/">MOVIES</a>
+                    <a class="headera" href="/books/">BOOKS</a>
                     <a class="headeraselected">PROGRESS TRACKERS</a>
                 </div>
 
@@ -331,35 +452,62 @@
             <center><h2>In-Progress Projects</h1></center>
             <div class="row">
                 <button class="thotpbutton" onclick="window.location.href='../projects/thotp/'">
-                    <img src="../res/thotpbigoutline.png" alt="thotplogo" class="thotpimg"/>
+                    <img src="../res/thotpbigoutline.png" alt="THoTP Logo" class="thotpimg"/>
                     <p class="thotptext"><b>The Heart of The Phoenix</b></p>
                     <p class="thotpsubtext"><b>The Lost Isles</b></p>
                     <p class="thotpprogresstext"><b>11%</b></p>
                     <progress class="thotpprogressbar" value="17.45" max="165"></progress>
                 </button>
+                <button class="sofbutton" onclick="window.location.href='../projects/sof/'">
+                    <img src="../res/sof.png" alt="SoF Logo" class="sofimg"/>
+                    <p class="softext"><b>Strings of Faith</b></p>
+                    <p class="sofsubtext"><b>‎</b></p>
+                    <p class="sofprogresstext"><b>7%</b></p>
+                    <progress class="sofprogressbar" value="4" max="55"></progress>
+                </button>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br>
+
+            <center><h2 style="color:#5de289">Completed Projects</h1></center>
+            <div class="row">
+                <button class="tefbutton" onclick="window.location.href='https://a.co/d/7thJtNL'">
+                    <img src="../res/teflogo.png" alt="TEF Logo" class="tefimg"/>
+                </button>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br>
+
+            <center><h2 style="color:#e97575">Indefinitely Delayed/Cancelled Projects</h1></center>
+            <div class="row">
+                <button class="lfbutton">
+                    <img src="../res/lf.png" alt="LF Logo" class="lfimg"/>
+                    <p class="lftext"><i><b>La Fierté</b></i></p>
+                    <p class="lfsubtext"><i>Playlet/Short Film</i></p>
+                </button>
             </div>
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <center><h2>Unrevealed Projects</h1></center>
+        <center><h2 style="color:#686868">Unrevealed Projects</h1></center>
         <div class="row">
             <button class="unrevealedbutton">
                 <img src="../res/unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
-                <p class="unrevealedtext" id="tarot"><b>Nl_T</b></p>
-                <p class="unrevealedprogresstext"><b>T.E.F.</b></p>
+                <p class="unrevealedtext" id="star"><b>Nl_R</b></p>
+                <p class="unrevealedprogresstext"><b>S</b></p>
                 <progress class="unrevealedprogressbar" value="0" max="100"></progress>
             </button>
             <button class="unrevealedbutton">
                 <img src="../res/unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
-                <p class="unrevealedtext" id="mystery"><b>Pt_M</b></p>
-                <p class="unrevealedprogresstext"><b>D.L.</b></p>
+                <p class="unrevealedtext" id="lake"><b>FF_H</b></p>
+                <p class="unrevealedprogresstext"><b>B.o.t.W.</b></p>
                 <progress class="unrevealedprogressbar" value="0" max="100"></progress>
             </button>
             <button class="unrevealedbutton">
                 <img src="../res/unrevealedLogo.png" alt="logo" class="unrevealedimg"/>
-                <p class="unrevealedtext" id="nightingale"><b>Nl_N</b></p>
-                <p class="unrevealedprogresstext"><b>N.B.</b></p>
+                <p class="unrevealedtext" id="nightingale"><b>Nl_S</b></p>
+                <p class="unrevealedprogresstext"><b>T.C.T.o.D.C.</b></p>
                 <progress class="unrevealedprogressbar" value="0" max="100"></progress>
             </button>
         </div>

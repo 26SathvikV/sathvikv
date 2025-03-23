@@ -101,6 +101,15 @@
             .bodyleft {
                 width: 80%;
             }
+            .projectCount {
+                margin: 1.5%;
+                width: 95%;
+                max-height: 5%;
+                border: #dbd95d 3px solid;
+                background-color: #dbd95d10;
+                border-radius: 25px;
+                color: #dbd95d;
+            }
             .updates {
                 width: 18%;
                 height: 100%;
@@ -110,12 +119,14 @@
             .section {
                 padding: 20px;
                 border: #5daeff solid;
+                background-color: #5daeff10;
                 border-radius: 25px;
                 margin-bottom: 1%;
             }
             .sectionccc {
                 padding: 20px;
                 border: #ffbbaa solid;
+                background-color: #ffbbaa10;
                 border-radius: 25px;
                 margin-bottom: 1%;
             }
@@ -161,6 +172,52 @@
             }
             .sectionytlink :hover{
                 color:hsl(0, 100%, 45%);
+            }
+
+            #newsletter-form {
+                justify-content: center;
+                align-items: center;
+                margin: 20px auto;
+            }
+
+            #email {
+                padding: 10px;
+                width: 25%;
+                border: 2px solid #5daeff;
+                border-radius: 15px;
+                font-size: 16px;
+                color: #5daeff;
+                background: transparent;
+                outline: none;
+            }
+
+            #email::placeholder {
+                color: #8bc5ff;
+                opacity: 0.8;
+            }
+
+            #email:focus {
+                border-color: #3f77af;
+            }
+
+            button {
+                background-color: #5daeff;
+                color: rgb(0, 0, 0);
+                border: none;
+                width: 25%;
+                padding: 0.5%;
+                border-radius: 25px;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #447eb8;
+            }
+
+            #message {
+                text-align: center;
+                color: #5daeff;
             }
         </style>
     </head>
@@ -250,6 +307,8 @@
                 <div class="headerleft">
                     <a class="headeraselected">HOME</a>
                     <a class="headera" href="/games/">GAMES</a>
+                    <a class="headera" href="/movies/">MOVIES</a>
+                    <a class="headera" href="/books/">BOOKS</a>
                     <a class="headera" href="/projects/">PROGRESS TRACKERS</a>
                 </div>
 
@@ -261,15 +320,29 @@
         <div style="margin-top:30.5px;border-bottom:1px solid #5daeff"></div>
 
         <center>
+        <div class="projectCount">
+            <p style="color:#dbd95d; font-size: 20px;"><a href="https://a.co/d/8sgvvFU" style="color:#dbd95d">The Endless February</a> has been released! If you like tarot and South Asian culture, please go check it out!</p>
+        </div>
+        <br>
         <div class="body">
             <div class="bodyleft">
                 <div class="section">
                     <h1 class="titletext">ABOUT</h1>
-                    <p class="bodytext">Hello! My name is Sathvik Vemulapalli. One of my passion is coding, so much so that I coded this website myself. Beyond coding, I spend my free time composing music, drawing art, and writing stories. You can look at my current projects by checking the <a href="/projects/" style="text-decoration: underline; cursor:pointer;">progress trackers page</a>.</p>
+                    <p class="bodytext">Hello! My name is Sathvik Vemulapalli. I spend my free time coding, composing music, drawing art, and writing stories. You can look at my current projects by checking the <a href="/projects/" style="text-decoration: underline; cursor:pointer;">progress trackers page</a> or subscribing to the newsletter below!</p>
                 </div>
                 <div class="section">
-                    <h1 class="titletext">The Traveling Circus is offering internships!</h1>
-                    <p class="bodytext">We are now offering internships! Keep track of our current cycle on our <a href="https://www.linkedin.com/company/101273871/admin/feed/posts/" style="text-decoration: underline; cursor:pointer;">Linkedin Page</a>.</p>
+                    <h3 id="message">Sign up for my newsletter for project updates and other fun stuff!</h3>
+                    <form id="newsletter-form" action="https://thetravelingcircus.substack.com/api/v1/free?nojs=true" method="post" target="hidden_iframe">
+                        <input type="email" name="email" id="email" placeholder="Email" style="text-align: center;" autocomplete="email" required>
+                        <br><br>
+                        <button type="submit"><b>Subscribe</b></button>
+                    </form>
+                    
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
+                </div>
+                <div class="section">
+                    <h1 class="titletext">Current 2025-2026 Releases</h1>
+                    <p class="bodytext"><i>The Endless February</i> (March 20, 2025): <a href="https://a.co/d/8sgvvFU">Please purchase a copy here!</a></p>
                 </div>
                 <div class="sectionccc">
                     <h1 class="titletextccc">My sister launched her own non-profit!</h1>
@@ -278,23 +351,48 @@
             </div>
             <div class="updates">
                 <h1 class="titletext">UPDATES</h1>
+
+                <div class="row">
+                    <div class="updatessection">
+                        <h2 class="titletext"><i>The Endless February</i> has been released!</h2>
+                        <p class="bodytext"><i>The Endless February</i> has now come out! Combining tarot, South Asian culture, and a struggle between legacy and self-determination, this book follows the story of Madhava, a yuvaraj/prince. More details can be found in the <a href="https://thetravelingcircus.substack.com" target="_blank" rel="noopener noreferrer">Substack newsletter</a>!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="updatessection">
+                        <h2 class="titletext">The Traveling Circus now has a newsletter!</h2>
+                        <p class="bodytext">We are now releasing a newsletter, where you can find updates on upcoming projects, teases for unannounced ones, and some other stuff working their way through the pipeline! You can subscribe on the homepage.</a>.</p>
+                    </div>
+                </div>
+                <div class="updatessectionccc">
+                    <h2 class="titletextccc">My sister launched her own non-profit!</h2>
+                    <p class="bodytextccc">My sister, Shreya Vemulapalli, launched cancel.cancer.culture, a youth led nonprofit committed to addressing the stigmas around the societal narrative aurrounding cancer around cancer! The mission is a deeply to our family, and therefore, I decided to join as a content management director! You can also apply or just keep track of our progress at the linktree <a href="https://linktr.ee/cancel.cancer.culture" style="text-decoration: underline; cursor:pointer; color: #ffbbaa">here</a>.</p>
+                </div>
                 <div class="row">
                     <div class="updatessection">
                         <h2 class="titletext">The Traveling Circus has an official website!</h2>
                         <p class="bodytext">My game dev company now has an official website. you can find it <a href="https://thetravelingcircus.wixsite.com/thetravelingcircus" style="text-decoration: underline; cursor:pointer;">here</a>.</p>
                     </div>
-
-                    <div class="updatessectionccc">
-                        <h2 class="titletextccc">My sister launched her own non-profit!</h2>
-                        <p class="bodytextccc">My sister, Shreya Vemulapalli, launched cancel.cancer.culture, a youth led nonprofit committed to addressing the stigmas around the societal narrative aurrounding cancer around cancer! The mission is a deeply to our family, and therefore, I decided to join as a content management director! You can also apply or just keep track of our progress at the linktree <a href="https://linktr.ee/cancel.cancer.culture" style="text-decoration: underline; cursor:pointer; color: #ffbbaa">here</a>.</p>
-                    </div>
                 </div>
             </div>
         </div>
         </center>
-
-        <style>
-            console.log("c2F0aHZpay12ZW11bGFwYWxsaS5jb20vYXNrIHBob2VuaXg=");
-        </style>
     </body>
+
+    <script>
+        document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            if (!email) {
+                document.getElementById("message").innerText = "Please enter a valid email.";
+                return;
+            }
+
+            this.submit();
+
+            document.getElementById("message").innerText = "Subscribed successfully!";
+            document.getElementById("email").value = ""; 
+        });
+    </script>
 </html>
